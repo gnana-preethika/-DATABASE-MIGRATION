@@ -26,3 +26,5 @@ Finally, a simple SELECT * FROM library_pg; query is executed to confirm that th
 This exercise is a simplified version of real-world database migration scenarios, where moving data between different platforms (like MySQL to PostgreSQL) is a common need during system upgrades, consolidations, or cloud transitions. The example reinforces core database concepts such as data transformation, schema mapping, and migration scripting. It also shows how standard SQL can be used to handle cross-database tasks effectively without the need for complex tools or utilities.
 
 
+OUTPUT:
+![Image](https://github.com/user-attachments/assets/d70c42d9-26b4-455e-bd29-0fbfcda07cab)
