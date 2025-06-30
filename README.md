@@ -27,4 +27,4 @@ This exercise is a simplified version of real-world database migration scenarios
 
 
 OUTPUT:
-![Image](https://github.com/user-attachments/assets/d70c42d9-26b4-455e-bd29-0fbfcda07cab)
+![Image](https://github.com/user-attachments/assets/d70c42d9-26b4-455e-bd29-0fbfcda07cab) 
