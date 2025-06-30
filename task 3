@@ -1,0 +1,32 @@
+-- Step 0: Drop old tables if they exist
+DROP TABLE IF EXISTS books_mysql;
+DROP TABLE IF EXISTS library_pg;
+
+-- Step 1: Simulated MySQL source table
+CREATE TABLE books_mysql (
+    book_id INT,
+    title VARCHAR(100),
+    author VARCHAR(100),
+    price DECIMAL(6,2)
+);
+
+-- Step 2: Insert sample book data into MySQL-like table
+INSERT INTO books_mysql VALUES
+(1, 'The Alchemist', 'Paulo Coelho', 299.99),
+(2, 'Atomic Habits', 'James Clear', 399.50),
+(3, 'The Psychology of Money', 'Morgan Housel', 349.00);
+
+-- Step 3: Simulated PostgreSQL target table
+CREATE TABLE library_pg (
+    book_id INTEGER,
+    book_title VARCHAR(100),
+    book_author VARCHAR(100),
+    cost NUMERIC(6,2)
+);
+
+-- Step 4: Migrate data from books_mysql to library_pg
+INSERT INTO library_pg (book_id, book_title, book_author, cost)
+SELECT book_id, title, author, price FROM books_mysql;
+
+-- Step 5: View migrated data
+SELECT * FROM library_pg;
